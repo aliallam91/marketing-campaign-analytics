@@ -8,10 +8,15 @@ def load_data(file_path='d:/Depi Project/The Final Project.xlsx'):
     Loads sheets from the Excel file, cleans columns, merges fact and dimension sheets,
     and returns both the merged dataset and the individual dataframes.
     """
-    if not os.path.exists(file_path):
-        raise FileNotFoundError(f"Excel file not found at: {file_path}")
+    actual_path = file_path
+    if not os.path.exists(actual_path):
+        fallback_path = os.path.basename(file_path)
+        if os.path.exists(fallback_path):
+            actual_path = fallback_path
+        else:
+            raise FileNotFoundError(f"Excel file not found at local or relative path: {file_path} or {fallback_path}")
         
-    xls = pd.ExcelFile(file_path)
+    xls = pd.ExcelFile(actual_path)
     
     # Load raw dataframes
     fact = pd.read_excel(xls, 'FactCampaignPerformance')
