@@ -1,0 +1,254 @@
+/* Import premium fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Apply font families globally */
+html, body, [class*="css"] {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #F8F9FA !important;
+    color: #2D3748 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+}
+
+/* Override Streamlit main container background */
+.main {
+    background-color: #F8F9FA !important;
+    padding-top: 15px !important;
+}
+
+/* Excel Style Sidebar */
+.stSidebar {
+    background-color: #FFFFFF !important;
+    border-right: 1px solid #E2E8F0 !important;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.02) !important;
+}
+
+.stSidebar [data-testid="stSidebarHeader"] {
+    background-color: #FFFFFF !important;
+}
+
+/* Excel Style Header Banner */
+.excel-header {
+    background-color: #50164A !important;
+    border-radius: 12px;
+    padding: 15px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(80, 22, 74, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.excel-header-title {
+    color: #FFFFFF !important;
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 !important;
+    text-align: center;
+}
+
+/* Ice-Blue KPI Cards (matching Rounded Rectangle 4, 12, 13, 15 in Excel) */
+.metric-card {
+    background-color: #DCEAF7 !important;
+    border: 1px solid #B0CBE5 !important;
+    border-radius: 12px !important;
+    padding: 18px 15px !important;
+    box-shadow: 0 2px 8px rgba(28, 53, 94, 0.04) !important;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+
+.metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(28, 53, 94, 0.08) !important;
+    border-color: #92B5D8 !important;
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #50164A;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1C355E;
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+
+.metric-subtext {
+    font-size: 0.75rem;
+    color: rgba(28, 53, 94, 0.65);
+    font-weight: 500;
+}
+
+/* Ice-Blue Container Panels for Charts */
+.chart-container {
+    background-color: #DCEAF7 !important;
+    border: 1px solid #B0CBE5 !important;
+    border-radius: 16px !important;
+    padding: 20px !important;
+    box-shadow: 0 4px 12px rgba(28, 53, 94, 0.05) !important;
+    margin-bottom: 20px;
+}
+
+.chart-title {
+    color: #50164A !important;
+    font-weight: 700 !important;
+    font-size: 1.15rem !important;
+    margin-bottom: 15px !important;
+    border-bottom: 1.5px solid rgba(80, 22, 74, 0.15);
+    padding-bottom: 8px;
+}
+
+/* Style the white background of plotly charts nested in ice-blue containers */
+.js-plotly-plot {
+    background-color: #FFFFFF !important;
+    border-radius: 12px;
+    border: 1px solid rgba(176, 203, 229, 0.5);
+    padding: 10px;
+}
+
+/* Slicer Grid Panel (Matches Rounded Rectangle 2/5 - Sidebar Slicer Panel on main grid) */
+.slicer-grid-panel {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 16px !important;
+    padding: 15px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual Excel Slicer Box Shape (e.g. Channel 1, Region 2 in Excel) */
+.slicer-box {
+    border: 1px solid #B0CBE5 !important;
+    border-radius: 8px !important;
+    background-color: #F8FAFC !important;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+}
+
+.slicer-box-header {
+    background-color: #DCEAF7 !important;
+    color: #50164A !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    padding: 6px 12px !important;
+    border-bottom: 1px solid #B0CBE5 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.slicer-box-body {
+    padding: 8px !important;
+}
+
+/* FORCE Streamlit st.pills to align vertically as an Excel Slicer Button List */
+.slicer-box-body div[data-testid="stPills"] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 4px !important;
+}
+
+/* Excel Slicer Button Styling */
+.slicer-box-body div[data-testid="stPills"] button {
+    background-color: #FFFFFF !important;
+    color: #334155 !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 3px !important;
+    padding: 5px 10px !important;
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    transition: all 0.1s ease !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.01) !important;
+    display: block !important;
+}
+
+/* Hover Slicer Button */
+.slicer-box-body div[data-testid="stPills"] button:hover {
+    background-color: #F1F5F9 !important;
+    border-color: #94A3B8 !important;
+    color: #0F172A !important;
+}
+
+/* Checked/Selected Slicer Button (Excel blue highlight) */
+.slicer-box-body div[data-testid="stPills"] button[aria-checked="true"] {
+    background-color: #B0CBE5 !important;
+    color: #1C355E !important;
+    border-color: #7AA2CA !important;
+    font-weight: 700 !important;
+}
+
+/* Clear filter helper button style */
+.clear-filter-btn {
+    font-size: 0.75rem;
+    color: rgba(80, 22, 74, 0.7);
+    cursor: pointer;
+    text-decoration: underline;
+    text-align: right;
+    margin-top: 4px;
+    padding-right: 8px;
+}
+
+/* Intro Page Styling matching Excel Shape 7 */
+.intro-container {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 20px !important;
+    padding: 40px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+.intro-meta-box {
+    background-color: #FFFFFF !important;
+    border: 1px solid #B0CBE5 !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    box-shadow: 0 2px 10px rgba(80, 22, 74, 0.05) !important;
+    margin-top: 15px;
+    border-left: 5px solid #50164A !important;
+}
+
+/* Dataframe styling for Light Theme */
+.dataframe {
+    background-color: #FFFFFF !important;
+    color: #1E293B !important;
+}
+
+.dataframe th {
+    background-color: #DCEAF7 !important;
+    color: #1C355E !important;
+    font-weight: 700 !important;
+    padding: 10px !important;
+    border: 1px solid #B0CBE5 !important;
+}
+
+.dataframe td {
+    padding: 8px 10px !important;
+    border: 1px solid #E2E8F0 !important;
+}
+
+/* Title Bar Gradient Line (Matching Purple Theme) */
+.gradient-bar {
+    height: 4px;
+    background: linear-gradient(90deg, #50164A 0%, #78206E 50%, #B0CBE5 100%);
+    border-radius: 2px;
+    margin-bottom: 25px;
+}
