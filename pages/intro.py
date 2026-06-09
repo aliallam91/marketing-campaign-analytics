@@ -7,7 +7,7 @@ def local_css(file_name):
         with open(file_name, "r") as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-local_css("d:/Depi Project/style.css")
+local_css("style.css")
 
 # Excel Header Banner (Rounded Rectangle 14 + Graphics 16, 20, 22, 25)
 st.markdown("""<div class="excel-header">
@@ -19,7 +19,7 @@ col1, col2 = st.columns([7, 5])
 
 with col1:
     st.markdown("<h3 style='color: #50164A; margin-bottom: 15px;'>Project Presentation Cover</h3>", unsafe_allow_html=True)
-    intro_bg_path = "d:/Depi Project/assets/Intro_img_0.jpeg"
+    intro_bg_path = "assets/Intro_img_0.jpeg"
     if os.path.exists(intro_bg_path):
         st.image(intro_bg_path, width='stretch')
     else:
