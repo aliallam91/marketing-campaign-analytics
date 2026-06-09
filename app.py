@@ -16,7 +16,7 @@ def local_css(file_name):
         with open(file_name, "r") as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-local_css("d:/Depi Project/style.css")
+local_css("style.css")
 
 # Load data
 try:
@@ -28,7 +28,7 @@ except Exception as e:
     st.stop()
 
 # Sidebar Branding (Rounded Rectangle 2/5 Slicer Panel is now on main page, sidebar is navigation only)
-st.sidebar.image("d:/Depi Project/assets/Intro_img_1.png", width=120)
+st.sidebar.image("assets/Intro_img_1.png", width=120)
 st.sidebar.markdown("<h2 style='font-size: 1.2rem; font-weight: 800; color: #50164A; margin-top: 10px; margin-bottom: 2px;'>Analytics Portal</h2>", unsafe_allow_html=True)
 st.sidebar.markdown("<div style='height: 2px; background-color: #50164A; margin-bottom: 20px;'></div>", unsafe_allow_html=True)
 
