@@ -10,7 +10,7 @@ def local_css(file_name):
         with open(file_name, "r") as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-local_css("d:/Depi Project/style.css")
+local_css("style.css")
 
 # Retrieve raw merged dataset from session state
 if 'all_data' not in st.session_state:
